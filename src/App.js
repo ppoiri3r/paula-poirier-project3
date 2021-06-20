@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './Header.js';
+import Shop from './Shop.js';
 import { useState, useEffect } from 'react';
 import firebase from './firebase.js';
 
@@ -18,16 +19,15 @@ const data = response.val();
 const plants = data.Plants;
 console.log(plants)
 
-const newState = [];
-
+const newState = []; 
 
 for (let item in plants) {
-  console.log(item)
-  newState.push(item)
+  newState.push({key: item, price: plants[item].price, image: plants[item].image, name: plants[item].title})
 }
 
-setPlants(newState);
 console.log(newState);
+setPlants(newState);
+
 })
 }, []);
 
@@ -36,6 +36,18 @@ console.log(newState);
   return (
     <div className="App">
       <Header />
+      {
+        plants.map((inventory) => {
+          return (
+            <Shop
+            imgSrc={inventory.image}
+            name={inventory.name}
+            price={inventory.price}
+            key={inventory.item}
+            />
+          )
+        })
+      }
     </div>
   );
 }

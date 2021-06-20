@@ -21,7 +21,7 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
   padding: 0;
   font-size: 1rem;
@@ -37,6 +37,7 @@ img {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
+  border: 1px solid green;
 }
 
 header {
@@ -110,6 +111,46 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid blue; */
-  height: 75vh;
+}
+
+/* SHOP SECTON */
+
+.Shop {
+  margin-top: 5%;
+}
+
+ul {
+  display: flex;
+  width: calc(100% / 3);
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+h3, p {
+  font-family: 'Playfair Display', serif;
+  text-transform: capitalize;
+  font-style: italic;
+  text-align: center;
+}
+
+.fa-plus {
+  color: white;
+} 
+
+.addToCartButton {
+  transition: 0.3s;
+  padding: 10px 13px;
+}
+
+.addToCartButton:hover {
+  background: rgba(1, 126, 1, 0.966);
+}
+
+.shopImages {
+  border: 1px solid red;
+  border-radius: 8px;
 }
