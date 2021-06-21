@@ -17,7 +17,7 @@ dbRef.on ('value', (response) => {
 const data = response.val();
 
 const plants = data.Plants;
-console.log(plants)
+// console.log(plants)
 
 const newState = []; 
 
@@ -25,7 +25,7 @@ for (let item in plants) {
   newState.push({key: item, price: plants[item].price, image: plants[item].image, name: plants[item].title})
 }
 
-console.log(newState);
+// console.log(newState);
 setPlants(newState);
 
 })
@@ -36,6 +36,9 @@ setPlants(newState);
   return (
     <div className="App">
       <Header />
+      <main className="wrapper Shop">
+        <section>
+          <ul>
       {
         plants.map((inventory) => {
           return (
@@ -48,6 +51,9 @@ setPlants(newState);
           )
         })
       }
+          </ul>
+        </section>
+      </main>
     </div>
   );
 }
