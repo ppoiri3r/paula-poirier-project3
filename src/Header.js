@@ -4,13 +4,26 @@
 import Cart from './Cart.js';
 import { Link } from 'react-scroll';
 
-function Header() {
+function Header({imgSrc, name, price, id, key, usersCart}) {
   return (
     <header className="Header">
       <div className="topBar">
         <p className="logo">GreenSpace <span>plant co.</span></p>
-        <Cart />
-        {/* <button className="cart"><i className="fas fa-shopping-cart"></i></button> */}
+        {
+        usersCart.map((selectedItem) => {
+          return (
+            <Cart
+            imgSrc={selectedItem.image}
+            name={selectedItem.name}
+            price={selectedItem.price}
+            id={selectedItem.key}
+            key={selectedItem.key}
+            // TO DO: only logging the plants key, but i need it to log the name, price and image
+            // addToCart={() => addToCart(inventory)}
+            />
+          )
+        })
+      }
       </div>
       <div className="wrapper headingFlex">
         <h1>see the world in <span>green</span></h1>
@@ -21,3 +34,5 @@ function Header() {
 }
 
 export default Header;
+{/* <button className="cart"><i className="fas fa-shopping-cart"></i></button> */}
+// {/* addToCart={() => addToCart(inventory.key)} */}
