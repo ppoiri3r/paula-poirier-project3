@@ -185,50 +185,63 @@ h3, p.price {
 
 .imageContainer {
   position: relative;
-  /* z-index: 10; */
-  /* background:rgba(2, 172, 2, 0.315); */
   margin-top: 0;
-}
-
-.imageContainer:hover img {
-  opacity: 0.3;
-}
-
-.imageContainer img {
-  opacity: 1;
-  transition: .3s ease;
-  backface-visibility: hidden;
+  /* border: 1px solid red; */
+  border-radius: 8px;
 }
 
 .shopImages {
   border-radius: 8px;
-  /* margin-top: 55px; */
+  /* border: 1px solid green; */
 }
 
-.plantInfo {
+.addedToCartMessage {
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:rgba(0, 53, 0, 0.295);
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+
+/* .addedToCartMessage {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* -ms-transform: translate(-50%, -50%); */
-  color: white;
-  transition: .3s ease;
-  opacity: 0;
-  z-index: 10;
-  background:rgba(2, 172, 2, 0.377);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.plantInfo:hover {
-  opacity: 1;
-}
-
-.plantInfo p,
-.plantInfo h3 {
-  font-size: 1.5rem;
-  text-shadow: 1px 1px rgba(2, 172, 2, 0.377);
-}
+  /* color: white; */
+  /* transition: .3s ease; */
+  /* opacity: 0; */
+  /* z-index: 20; */
+  /* background:rgba(2, 172, 2, 0.377); */
+  /* height: 100%; */
+  /* width: 100%; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* } */
+  
+  .Shop p, h3 {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px rgba(2, 172, 2, 0.377);
+  }
+  
+  .Shop p {
+    margin-bottom: 20px;
+  }
+  
+  .addedToCartMessage p {
+    color: white;
+    /* text-shadow: 2px 2px white; */
+    font-weight: bold;
+    margin-bottom: 0;
+  }

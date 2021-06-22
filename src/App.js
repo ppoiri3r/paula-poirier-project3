@@ -6,16 +6,7 @@ import firebase from './firebase.js';
 
 function App() {
 
-  const [usersCart, setUsersCart] = useState([]);
-// create function for when an item is clicked, that item is pushed to setUsersCart array
-  useEffect(() => {
-  console.log(usersCart);
-  }, [usersCart])
-
-  const addToCart = (plant) => {
-    const current = [...usersCart];
-    setUsersCart([...current, plant]);
-  }
+  // INVENTORY
 
   // inventory (already listed in firebase)
   const [plants, setPlants] = useState([]);
@@ -43,6 +34,25 @@ function App() {
 })
 }, []);
 
+// UPDATING USERS CART 
+
+  const [usersCart, setUsersCart] = useState([]);
+// create function for when an item is clicked, that item is pushed to setUsersCart array
+  useEffect(() => {
+    console.log(usersCart);
+  }, [usersCart])
+
+  const addToCart = (plant) => {
+    const current = [...usersCart];
+    setUsersCart([...current, plant]);
+  }
+
+  const displayMessage = () => {
+    
+  }
+
+
+
 
   return (
     <div className="App">
@@ -59,7 +69,7 @@ function App() {
             price={inventory.price}
             id={inventory.key}
             key={inventory.key}
-            addToCart={() => addToCart(inventory.key)}
+            addToCart={() => addToCart(inventory.key), () => displayMessage}
             />
           )
         })
