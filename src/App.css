@@ -249,8 +249,9 @@ h3, p.price {
 
   /* CART COMPONENT */
 
-  .cartDropDown {
+  .cartDropdown {
     width: 300px;
     height: 400px;
     border: 1px solid red;
+    /* display: none; */
   }

@@ -1,26 +1,38 @@
 // TO DO
 // create a function here that with allow the user to click the "shop now" button and have the page automatically scroll the shop into view.
 // pass the state usersCart into Header
+
+// write code to display the cartDropdown in Header.js inside function Header() {
+
+// }
+
+
 import Cart from './Cart.js';
 import { Link } from 'react-scroll';
 
-function Header({imgSrc, name, price, id, key, usersCart}) {
+// imgSrc, name, price, id, key, 
+function Header({usersCart}) {
   return (
     <header className="Header">
       <div className="topBar">
         <p className="logo">GreenSpace <span>plant co.</span></p>
+        <button className="cart"><i className="fas fa-shopping-cart"></i></button>
         {
         usersCart.map((selectedItem) => {
           return (
-            <Cart
-            imgSrc={selectedItem.image}
-            name={selectedItem.name}
-            price={selectedItem.price}
-            id={selectedItem.key}
-            key={selectedItem.key}
-            // TO DO: only logging the plants key, but i need it to log the name, price and image
-            // addToCart={() => addToCart(inventory)}
-            />
+            <div className="cartDropdown">
+              <ul>
+                <li>
+                  <Cart
+                  imgSrc={selectedItem.image}
+                  name={selectedItem.name}
+                  price={selectedItem.price}
+                  id={selectedItem.key}
+                  key={selectedItem.key}
+                  />
+                </li>
+              </ul>  
+            </div>
           )
         })
       }
@@ -34,5 +46,3 @@ function Header({imgSrc, name, price, id, key, usersCart}) {
 }
 
 export default Header;
-{/* <button className="cart"><i className="fas fa-shopping-cart"></i></button> */}
-// {/* addToCart={() => addToCart(inventory.key)} */}

@@ -5,18 +5,11 @@
 
 function Cart({imgSrc, name, price}) {
   return (
-    <div>
-      <button className="cart"><i className="fas fa-shopping-cart"></i></button>
-      <div className="cartDropdown">
-        <ul>
-          <li>
-            <h3>{name}</h3>
-            <p>{`$${price}`}</p>
-            <img src={imgSrc} alt={name}/>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <>
+      <h3>{name}</h3>
+      <p>{`$${price}`}</p>
+      <img src={imgSrc} alt={name}/>
+    </>
   )
 }
 

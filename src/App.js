@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="App">
       <Header 
-      usersCart = {usersCart}/>
+      usersCart={usersCart}/>
       <main className="wrapper Shop" id="shop">
         <section>
           <ul>
