@@ -143,6 +143,7 @@ button.cart:hover {
 
 .Shop {
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 ul {
@@ -200,6 +201,7 @@ h3, p.price {
   backface-visibility: hidden;
 }
 
+
 .shopImages {
   border-radius: 8px;
   /* margin-top: 55px; */
@@ -221,6 +223,7 @@ h3, p.price {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 8px;
 }
 
 .plantInfo:hover {
