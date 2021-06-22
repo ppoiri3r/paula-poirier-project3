@@ -160,11 +160,16 @@ h3, p.price {
   color: white;
 } 
 
+.imageContainer {
+  position: relative;
+}
+
 .addToCartButton {
   transition: 0.3s;
-  padding: 10px 13px;
+  padding: 6px 9px;
   position: absolute;
-  bottom: 40px;
+  right: 0;
+  bottom: 0;
 }
 
 .addToCartButton:hover {
