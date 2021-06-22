@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main className="wrapper Shop">
+      <main className="wrapper Shop" id="shop">
         <section>
           <ul>
       {

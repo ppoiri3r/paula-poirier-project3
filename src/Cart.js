@@ -1,13 +1,12 @@
-// import { useState } from 'react';
+// pseudo code 
 
-// function Cart({cartItems}) {
-//   const [usersCart, setUsersCart] = useState([]);
-  
+// push the array usersCart into button "cart"
+// when the user clicks on the shopping cart icon, the items they've added to their cart appears in a pop up modal 
 
-//   return (
-//     <button onClick={() => setUsersCart} className="cart"><i className="fas fa-shopping-cart"></i></button>
-//     )
-// }
-    
+function Cart() {
+  return (
+    <button className="cart"><i className="fas fa-shopping-cart"></i></button>
+  )
+}
 
-// export default Cart;
+export default Cart;

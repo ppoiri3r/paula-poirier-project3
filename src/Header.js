@@ -9,12 +9,12 @@ function Header() {
     <header className="Header">
       <div className="topBar">
         <p className="logo">GreenSpace <span>plant co.</span></p>
-        {/* <Cart /> */}
-        <button className="cart"><i className="fas fa-shopping-cart"></i></button>
+        <Cart />
+        {/* <button className="cart"><i className="fas fa-shopping-cart"></i></button> */}
       </div>
       <div className="wrapper headingFlex">
         <h1>see the world in <span>green</span></h1>
-        <button><Link to="Shop" smooth={true} activeClass="active" spy={true}>Shop Now</Link></button>
+        <button className="shopNow"><Link to="shop" smooth={true} activeClass="active" spy={true}>Shop Now</Link></button>
       </div>
     </header>
   )
