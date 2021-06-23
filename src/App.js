@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './Header.js';
 import Shop from './Shop.js';
+import Footer from './Footer.js';
 import { useState, useEffect } from 'react';
 import firebase from './firebase.js';
 
@@ -43,14 +44,14 @@ function App() {
   const [usersCart, setUsersCart] = useState([]);
 // create function for when an item is clicked, that item is pushed to setUsersCart array
   useEffect(() => {
-    console.log(usersCart);
+    // console.log(usersCart);
   }, [usersCart])
   
   const addToCart = (plant) => {
-    console.log(usersCart)
+    // console.log(usersCart)
     const current = [...usersCart];
     setUsersCart([...current, plant]);
-    console.log(usersCart);
+    // console.log(usersCart);
   }
   
 
@@ -79,6 +80,7 @@ function App() {
           </ul>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

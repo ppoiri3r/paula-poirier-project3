@@ -8,30 +8,40 @@ import { useState } from 'react';
 function Cart({usersCart}) {
 
   const [click, setClick] = useState(false);
+  console.log(click);
   const handleClick = () => {
     setClick(!click);
   }
+
+
+  // style={handleClick ? 'display: block' : 'display: none'}
+  // {click ? 'active' : 'inactive'}
 return (
-  <div>
-    <button className="cart" onClick={handleClick}><i className={click ? 'fas fa-times' : 'fas fa-shopping-cart'}></i></button>
+  <div className="shoppingCart">
+    <button className="cart" onClick={handleClick}><i className={click ? 'fas fa-times' : 'fas fa-shopping-cart'}></i><p className="lengthInCart">{usersCart.length}</p></button>
+    <div className={click ? 'cartDropDown active' : 'cartDropDown inactive'}>
+      <h4>your cart</h4>
+      <ul>
     {
     usersCart.map((selectedItem) => {
       return (
-          <div>
-            <ul>
-              {console.log(selectedItem)}
-              <li key={selectedItem.key}>
-                <div className="textInfoInCart">
-                  <h3 className="carth3">{selectedItem.name}</h3>
-                  <p>{`$${selectedItem.price}`}</p>
-                </div>
-                <img src={selectedItem.image} alt={selectedItem.name}/>
-              </li>
-            </ul>  
+        <li className="cartLi" key={selectedItem.key}>
+          <div className="textInfoInCart">
+            <h3>{selectedItem.name}</h3>
+            <p>{`$${selectedItem.price}`}</p>
           </div>
-            )
-          })
-        }
+          <img src={selectedItem.image} alt={selectedItem.name}/>
+        </li>
+        )
+      })
+    }
+      </ul> 
+      <div>
+        <p className="total">total: </p>
+        <p className="quantity">quantity: {usersCart.length}</p>
+        <button className="paymentButton">Proceed to Payment</button>
+      </div>
+    </div>
   </div>
   )
 }

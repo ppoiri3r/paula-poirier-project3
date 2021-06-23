@@ -1,12 +1,3 @@
-// TO DO
-// create a function here that with allow the user to click the "shop now" button and have the page automatically scroll the shop into view.
-// pass the state usersCart into Header
-
-// write code to display the cartDropdown in Header.js inside function Header() {
-
-// }
-
-
 import Cart from './Cart.js';
 import { Link } from 'react-scroll';
 
