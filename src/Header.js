@@ -10,32 +10,14 @@
 import Cart from './Cart.js';
 import { Link } from 'react-scroll';
 
-// imgSrc, name, price, id, key, 
 function Header({usersCart}) {
+
   return (
     <header className="Header">
       <div className="topBar">
         <p className="logo">GreenSpace <span>plant co.</span></p>
-        <button className="cart"><i className="fas fa-shopping-cart"></i></button>
-        {
-        usersCart.map((selectedItem) => {
-          return (
-            <div className="cartDropdown">
-              <ul>
-                <li>
-                  <Cart
-                  imgSrc={selectedItem.image}
-                  name={selectedItem.name}
-                  price={selectedItem.price}
-                  id={selectedItem.key}
-                  key={selectedItem.key}
-                  />
-                </li>
-              </ul>  
-            </div>
-          )
-        })
-      }
+        <Cart 
+        usersCart={usersCart}/>
       </div>
       <div className="wrapper headingFlex">
         <h1>see the world in <span>green</span></h1>

@@ -18,6 +18,7 @@ function App() {
     dbRef.on ('value', (response) => {
     // storing the response from firebase into a variable
     const data = response.val();
+    // console.log(data);
     // storing the object "Plants" from firebase into a variable so it's easier to loop through
     const dataPlants = data.Plants;
     // console.log(dataPlants);
@@ -44,13 +45,14 @@ function App() {
   useEffect(() => {
     console.log(usersCart);
   }, [usersCart])
-
+  
   const addToCart = (plant) => {
+    console.log(usersCart)
     const current = [...usersCart];
     setUsersCart([...current, plant]);
-    // console.log(current);
+    console.log(usersCart);
   }
-
+  
 
   return (
     <div className="App">
@@ -58,7 +60,7 @@ function App() {
       usersCart={usersCart}/>
       <main className="wrapper Shop" id="shop">
         <section>
-          <ul>
+          <ul className="shopUl">
       {
         plants.map((inventory) => {
           return (

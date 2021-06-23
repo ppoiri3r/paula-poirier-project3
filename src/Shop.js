@@ -1,7 +1,7 @@
-function Shop({imgSrc, price, name, id, addToCart}) {
+function Shop({imgSrc, price, name, addToCart, key}) {
 
   return (
-    <li key={id}>
+    <li key={key}>
       <div className="imageContainer">
         <img src={imgSrc} alt={name}className="shopImages"/>
         <button onClick={addToCart} className="addToCartButton"><i className="fas fa-plus"></i></button>
