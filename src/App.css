@@ -116,16 +116,46 @@ button.shopNow:hover {
   color: rgb(0, 53, 0);
 }
 
+.fa-shopping-cart {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.fa-times {
+  font-size: 1.5rem;
+  padding-right: 1px;
+  padding-left: 1px;
+}
+
+.lengthInCart {
+  display: inline-block;
+  position: absolute;
+  left: 13px;
+  bottom: 21.5px;
+  margin-left: 10px;
+  background: rgb(224, 255, 209);
+  width: 20px;
+  height: 20px;
+  color: black;
+  border-radius: 50px;
+  font-size: 0.65rem;
+  padding-top: 2.5px;
+  color:rgb(0, 53, 0)
+}
+
 button.cart {
-  background: white;
-  color:rgb(0, 53, 0);
+  position: fixed;
+  right: 0px;
+  background: rgb(0, 53, 0);
+  color:white;
   padding: 8px 13px;
   margin-right: 30px;
   margin-top: 0;
+  z-index: 30;
 }
 
 button.cart:hover {
-  background:rgb(0, 53, 0);
+  background:rgb(0, 0, 0);
   color: white;
 }
 
@@ -146,7 +176,7 @@ button.cart:hover {
   margin-bottom: 5%;
 }
 
-ul {
+.shopUl {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -186,52 +216,178 @@ h3, p.price {
 
 .imageContainer {
   position: relative;
-  /* z-index: 10; */
-  /* background:rgba(2, 172, 2, 0.315); */
   margin-top: 0;
-}
-
-.imageContainer:hover img {
-  opacity: 0.3;
-}
-
-.imageContainer img {
-  opacity: 1;
-  transition: .3s ease;
-  backface-visibility: hidden;
+  /* border: 1px solid red; */
+  border-radius: 8px;
 }
 
 
 .shopImages {
   border-radius: 8px;
-  /* margin-top: 55px; */
+  /* border: 1px solid green; */
 }
 
-.plantInfo {
+.addedToCartMessage {
+  text-align: center;
+  text-transform: uppercase;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* -ms-transform: translate(-50%, -50%); */
-  color: white;
-  transition: .3s ease;
-  opacity: 0;
-  z-index: 10;
-  background:rgba(2, 172, 2, 0.377);
-  height: 100%;
+  background:rgba(0, 53, 0, 0.295);
   width: 100%;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 8px;
+=======
+  height: 20%;
+  color: white;
+  text-shadow: 2px 2px white;
+  font-weight: bold;
+  animation: fadeOut 6s;
+  animation-fill-mode: forwards;
+>>>>>>> 65cc5ae2834f050a84255642592e62f31492d29c
 }
 
-.plantInfo:hover {
-  opacity: 1;
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
-.plantInfo p,
-.plantInfo h3 {
-  font-size: 1.5rem;
-  text-shadow: 1px 1px rgba(2, 172, 2, 0.377);
-}
+/* .addedToCartMessage p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+  
+  .Shop p, h3 {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px rgba(2, 172, 2, 0.377);
+  }
+  
+  .Shop p {
+    margin-bottom: 20px;
+  }
+  
+  /* .addedToCartMessage p {
+    color: white;
+    /* text-shadow: 2px 2px white; */
+    /* font-weight: bold; */
+    /* margin-bottom: 0; */
+  /* } */
+
+
+  /* CART COMPONENT */
+
+  .cartDropDown {
+    /* border: 1px solid hotpink; */
+    position: fixed;
+    z-index: 30;
+    right: 31px;
+    top: 74px;
+    height: 500px;
+    width: 300px;
+    border-radius: 8px;
+    background: rgb(230, 250, 193);
+    box-shadow: 5px 5px rgb(0, 53, 0);
+    padding: 25px;
+    overflow: scroll;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .inactive {
+    display: none;
+  }
+
+  .shoppingCart ul{
+    width: 100%;
+  }
+
+  .shoppingCart li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .shoppingCart img {
+    width: 60px;
+    height: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+
+  .shoppingCart h3 {
+    padding-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    text-align: left;
+  }
+
+  .shoppingCart h4 {
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background: rgb(0, 53, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .total, .quantity {
+    text-transform: uppercase;
+    padding-top: 20px;
+  }
+
+  .quantity {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .paymentButton {
+    transition: 0.3s;
+    border: 2px solid rgb(0, 53, 0);
+    font-size: 0.8rem;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .paymentButton:hover {
+    border: 2px solid rgb(0, 53, 0);
+    background:white;
+    color: black;
+  }
+
+  .textInfoInCart {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* FOOTER COMPONENT */
+
+  footer {
+    height: 35px;
+    background:rgb(0, 53, 0);
+  }
+
+  footer p {
+    height: 35px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
