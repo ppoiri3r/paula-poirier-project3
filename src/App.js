@@ -28,7 +28,6 @@ function App() {
 
     for (let item in dataPlants) {
       newState.push({key: item, price: dataPlants[item].price, image: dataPlants[item].image, name: dataPlants[item].title})
-      // console.log(item)
       // console.log(newState)
     }
 

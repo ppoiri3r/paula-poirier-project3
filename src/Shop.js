@@ -1,19 +1,40 @@
-import { useState } from 'react';
-function Shop({imgSrc, price, name, addToCart, key}) {
+import { useEffect, useState } from 'react';
 
-  const [click, setClick] = useState(false);
-  console.log(click);
-  const handleClick = () => {
-    setClick(!click);
-  }
+function Shop({imgSrc, price, name, addToCart, id}) {
+  // console.log(key);
+
+const [click, setClick] = useState(false);
+const handleClick = () => {
+  const message = document.querySelector('.addedToCartMessage')
+  message.classList.remove('inactive');
+  message.classList.add('active');
+  setClick(!click);
+  console.log('set to true')
+  message.classList.add('active');
+  // message.classList.add('addedToCartMessage', 'fadeOut')
+  setTimeout(() => {
+    setClick(!click)
+    console.log('set to false')
+    message.classList.remove('active', 'fadeOut');
+    message.classList.add('inactive');
+}, 3000);
+}
+
+  // animation-fill: 
+  // set timeout 
+
+  // if click === true, display addedToCartMessage fadeOut 
+  // THEN switch true to false
+// {click ? 'addedToCartMessage active fadeOut' : 'addedToCartMessage inactive'}
 
   return (
-    <li key={key}>
+    <li key={id}>
       <div className="imageContainer">
         <img src={imgSrc} alt={name}className="shopImages"/>
-        <button onClick={addToCart, handleClick} className="addToCartButton"><i className={click ? 'fas fa-check': 'fas fa-plus'}></i></button>
+        <button onClick={() => {addToCart(); handleClick()}} className="addToCartButton"><i className={click ? 'fas fa-plus' : 'fas fa-plus'}></i></button>
       </div>
-      <div className={click ? 'addedToCartMessage active' : 'addedToCartMessage inactive'}>
+      {/* <div className="fakeClassName"> */}
+      <div className="addedToCartMessage inactive">
         <p>Added to Cart</p>
       </div>
       <h3>{name}</h3>
@@ -23,3 +44,9 @@ function Shop({imgSrc, price, name, addToCart, key}) {
 }
 
 export default Shop;
+
+// className={
+//   if (click) {
+//     'addedToCartMessage fadeOut'
+//   }.then()
+// }

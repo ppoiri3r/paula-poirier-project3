@@ -236,14 +236,28 @@ h3, p.price {
   background:rgba(0, 53, 0, 0.295);
   width: 100%;
   height: 20%;
+  color: white;
+  text-shadow: 2px 2px white;
+  font-weight: bold;
+  animation: fadeOut 6s;
+  animation-fill-mode: forwards;
 }
 
-.addedToCartMessage p {
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* .addedToCartMessage p {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
   
   .Shop p, h3 {
@@ -255,12 +269,12 @@ h3, p.price {
     margin-bottom: 20px;
   }
   
-  .addedToCartMessage p {
+  /* .addedToCartMessage p {
     color: white;
     /* text-shadow: 2px 2px white; */
-    font-weight: bold;
-    margin-bottom: 0;
-  }
+    /* font-weight: bold; */
+    /* margin-bottom: 0; */
+  /* } */
 
 
   /* CART COMPONENT */
@@ -274,7 +288,7 @@ h3, p.price {
     height: 500px;
     width: 300px;
     border-radius: 8px;
-    background: rgb(230, 255, 216);
+    background: rgb(230, 250, 193);
     box-shadow: 5px 5px rgb(0, 53, 0);
     padding: 25px;
     overflow: scroll;
