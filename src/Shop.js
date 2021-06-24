@@ -4,7 +4,7 @@ function Shop({imgSrc, price, name, addToCart, id}) {
   // console.log(key);
 
 const [click, setClick] = useState(false);
-const handleClick = () => {
+const handleClick = (event) => {
   const message = document.querySelector('.addedToCartMessage')
   message.classList.remove('inactive');
   message.classList.add('active');
@@ -17,7 +17,8 @@ const handleClick = () => {
     console.log('set to false')
     message.classList.remove('active', 'fadeOut');
     message.classList.add('inactive');
-}, 3000);
+  }, 3000);
+  console.log(event.target);
 }
 
   // animation-fill: 
