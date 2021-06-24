@@ -236,19 +236,16 @@ h3, p.price {
   transform: translate(-50%, -50%);
   background:rgba(0, 53, 0, 0.295);
   width: 100%;
-<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 8px;
-=======
   height: 20%;
   color: white;
   text-shadow: 2px 2px white;
   font-weight: bold;
   animation: fadeOut 6s;
   animation-fill-mode: forwards;
->>>>>>> 65cc5ae2834f050a84255642592e62f31492d29c
 }
 
 @keyframes fadeOut {
