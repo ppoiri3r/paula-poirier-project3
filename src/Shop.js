@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function Shop({imgSrc, price, name, addToCart, id}) {
 
