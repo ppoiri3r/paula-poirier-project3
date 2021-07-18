@@ -4,7 +4,7 @@ import 'firebase/database';
   const firebaseConfig = {
     apiKey: "AIzaSyDWDeV3QVYZQDg-Qy_0AsWMOoSOAu9E37I",
     authDomain: "paula-poirier-project3.firebaseapp.com",
-    databaseURL: "https://paula-poirier-project3-default-rtdb.firebaseio.com",
+    databaseURL: "https://paula-poirier-project3-default-rtdb.firebaseio.com/",
     projectId: "paula-poirier-project3",
     storageBucket: "paula-poirier-project3.appspot.com",
     messagingSenderId: "977111895090",
