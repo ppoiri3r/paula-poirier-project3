@@ -42,7 +42,7 @@ const handleClick = () => {
   return (
     <li key={id}>
       <div className="imageContainer">
-        <img src={imgSrc} alt={name}className="shopImages"/>
+        <img src={imgSrc} alt={name} className="shopImages"/>
         <button onClick={() => {addToCart(); handleClick()}} className="addToCartButton"><i className={click ? 'fas fa-plus' : 'fas fa-plus'}><span className="sr-only">Add to Cart</span></i></button>
       </div>
       <div className={click ? 'addedToCartMessage active fadeOut' : 'addedToCartMessage inactive'}>

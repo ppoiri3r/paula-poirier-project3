@@ -31,13 +31,13 @@ function App() {
   const [usersCart, setUsersCart] = useState([]);
 // create function for when an item is clicked, that item is pushed to setUsersCart array
   useEffect(() => {
+}, [usersCart])
 
-  }, [usersCart])
-  
-  const addToCart = (plant) => {
-    const current = [...usersCart];
-    setUsersCart([...current, plant]);
-  }
+const addToCart = (plant) => {
+  const current = [...usersCart];
+  setUsersCart([...current, plant]);
+  console.log(usersCart);
+}
   
 
   return (
