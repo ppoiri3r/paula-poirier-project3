@@ -19,11 +19,7 @@ const handleClick = () => {
   }, 3000);
 }
 
-
-// David, 
-// I left these small notes here to demonstrate that I did put in serious effort to try to get the pop up "added to cart!" message to function as it should. 
-// I've explored all of these options and it still was not behaving the way I wanted it to. The code that I've left running is the closest I've come to solving the problem. *sad face*
-// I know the ternary operator {click ? 'addedToCartMessage active fadeOut' : 'addedToCartMessage inactive'} is what is causing the issue but can't seem to pin point a better way. 
+// potential fixes for add to cart issue 
 
 // animationend()
 
